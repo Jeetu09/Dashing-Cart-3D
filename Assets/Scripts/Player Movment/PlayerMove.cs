@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
-using Microsoft.Unity.VisualStudio.Editor;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -14,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
        UI.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void FixedUpdate()
@@ -37,17 +38,22 @@ public class PlayerMove : MonoBehaviour
         {
             Debug.Log("Collided with obstacle!");
             playermove.enabled = false;
-            UI.SetActive(true);
-
+            PauseMenue();
         }
 
         else if(collision.gameObject.name == "Last Wall")
             {
                 Debug.Log("You Won");
                 playermove.enabled = false;
-                UI.SetActive(true);
-
+            PauseMenue();
         }
+    }
+
+    void PauseMenue()
+    {
+        UI.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void RestartGame()
