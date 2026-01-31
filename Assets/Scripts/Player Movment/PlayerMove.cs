@@ -5,7 +5,7 @@ public class PlayerMove : MonoBehaviour
 {
     public Rigidbody PlayerRigidbody;
     public float moveSpeed = 10f;
-    public float turnSpeed = 10f;
+    public float turnSpeed = 20f;
     public PlayerMove playermove;
 
     void FixedUpdate()
