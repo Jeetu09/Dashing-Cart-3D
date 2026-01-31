@@ -24,3 +24,5 @@ This project demonstrates my understanding of game mechanics, player control, an
 📷 SnapShots :
 
 <img width="1521" height="843" alt="image" src="https://github.com/user-attachments/assets/ef18a9ba-d6ee-406c-b548-85b5967e6589" />
+<img width="1520" height="836" alt="image" src="https://github.com/user-attachments/assets/60ea746d-6e43-480f-a678-b785aeba3e6a" />
+
